@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication showFlexChrome="false" alwaysInFront="true" xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" width="1440" height="764" frameRate="60"  addedToStage="start();">
+	<mx:Style source="globalCss.css">
+		
+	</mx:Style>
+	<mx:Script source="MainDoc.as">
+	</mx:Script>
+	<mx:Canvas x="528" y="252" width="431" height="81" id="sp_wind" alpha="1.0" mouseDown="setTop(sp_wind);sp_wind.startDrag();" verticalScrollPolicy="off" horizontalScrollPolicy="off">
+		<mx:Label x="10" y="26" text="风速——整数" fontFamily="Verdana" fontSize="14"/>
+		<mx:Label x="10" y="49" text="风速——小数" fontSize="14"/>
+	</mx:Canvas>
+	<mx:Canvas x="484" y="424" width="300" height="250" id="sp_angle" mouseDown="setTop(sp_angle);sp_angle.startDrag();" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+		<mx:Label x="26" y="14" text="满抛" fontFamily="Verdana" fontSize="14" color="#990000"/>
+		<mx:Label x="85" y="14" fontFamily="Verdana" fontSize="14" color="#343434" fontWeight="bold" fontStyle="italic" id="lb_zp_angle"/>
+		<mx:Label x="128" y="14" fontFamily="Verdana" fontSize="14" color="#F05502" fontWeight="bold" fontStyle="italic" id="lb_zp_power"/>
+		<mx:Label x="128" y="45" fontFamily="Verdana" fontSize="14" color="#F05502" fontWeight="bold" fontStyle="italic" id="lb_Hzp_power"/>
+		<mx:Label x="85" y="204" fontFamily="Verdana" fontSize="14" color="#343434" fontWeight="bold" fontStyle="italic" id="lb_30_angle"/>
+		<mx:Label x="128" y="204" fontFamily="Verdana" fontSize="14" color="#F05502" fontWeight="bold" fontStyle="italic" id="lb_30_power"/>
+		<mx:Label x="26" y="204" text="30定角" fontFamily="Verdana" fontSize="14" color="#990000"/>
+		<mx:Label x="163" y="14" text="背抛" fontFamily="Verdana" fontSize="14"/>
+		<mx:Label x="204" y="14" fontFamily="Verdana" fontSize="14" color="#343434" fontWeight="bold" fontStyle="italic" id="lb_bp_angle"/>
+		<mx:Label x="247" y="14" fontFamily="Verdana" fontSize="14" color="#F05502" fontWeight="bold" fontStyle="italic" id="lb_bp_power"/>
+		<mx:Label x="26" y="45" text="半抛" fontFamily="Verdana" fontSize="14" color="#990000"/>
+		<mx:Label x="85" y="45" fontFamily="Verdana" fontSize="14" color="#343434" fontWeight="bold" fontStyle="italic" id="lb_Hzp_angle"/>
+		<mx:Label x="163" y="45" text="背抛" fontFamily="Verdana" fontSize="14"/>
+		<mx:Label x="204" y="45" fontFamily="Verdana" fontSize="14" color="#343434" fontWeight="bold" fontStyle="italic" id="lb_Hbp_angle"/>
+		<mx:Label x="247" y="45" fontFamily="Verdana" fontSize="14" color="#F05502" fontWeight="bold" fontStyle="italic" id="lb_Hbp_power"/>
+		<mx:Label x="163" y="110" text="背抛" fontFamily="Verdana" fontSize="14"/>
+		<mx:Label x="163" y="173" text="背抛" fontFamily="Verdana" fontSize="14"/>
+		<mx:Label x="85" y="110" fontFamily="Verdana" fontSize="14" color="#343434" fontWeight="bold" fontStyle="italic" id="lb_70_angle"/>
+		<mx:Label x="128" y="110" fontFamily="Verdana" fontSize="14" color="#F05502" fontWeight="bold" fontStyle="italic" id="lb_70_power"/>
+		<mx:Label x="85" y="173" fontFamily="Verdana" fontSize="14" color="#343434" fontWeight="bold" fontStyle="italic" id="lb_60_angle"/>
+		<mx:Label x="128" y="173" fontFamily="Verdana" fontSize="14" color="#F05502" fontWeight="bold" fontStyle="italic" id="lb_60_power"/>
+		<mx:Label x="204" y="110" fontFamily="Verdana" fontSize="14" color="#343434" fontWeight="bold" fontStyle="italic" id="lb_70_angle_back"/>
+		<mx:Label x="247" y="110" fontFamily="Verdana" fontSize="14" color="#F05502" fontWeight="bold" fontStyle="italic" id="lb_70_power_back"/>
+		<mx:Label x="204" y="173" fontFamily="Verdana" fontSize="14" color="#343434" fontWeight="bold" fontStyle="italic" id="lb_60_angle_back"/>
+		<mx:Label x="247" y="173" fontFamily="Verdana" fontSize="14" color="#F05502" fontWeight="bold" fontStyle="italic" id="lb_60_power_back"/>
+		<mx:Label x="26" y="110" text="70变角" fontFamily="Verdana" fontSize="14" color="#990000"/>
+		<mx:Label x="26" y="173" text="60变角" fontFamily="Verdana" fontSize="14" color="#990000"/>
+		<mx:Label x="163" y="142" text="背抛" fontFamily="Verdana" fontSize="14"/>
+		<mx:Label x="85" y="142" fontFamily="Verdana" fontSize="14" color="#343434" fontWeight="bold" fontStyle="italic" id="lb_65_angle"/>
+		<mx:Label x="128" y="142" fontFamily="Verdana" fontSize="14" color="#F05502" fontWeight="bold" fontStyle="italic" id="lb_65_power"/>
+		<mx:Label x="204" y="142" fontFamily="Verdana" fontSize="14" color="#343434" fontWeight="bold" fontStyle="italic" id="lb_65_angle_back"/>
+		<mx:Label x="247" y="142" fontFamily="Verdana" fontSize="14" color="#F05502" fontWeight="bold" fontStyle="italic" id="lb_65_power_back"/>
+		<mx:Label x="26" y="142" text="65变角" fontFamily="Verdana" fontSize="14" color="#990000"/>
+		<mx:Label x="85" y="76" fontFamily="Verdana" fontSize="14" color="#343434" fontWeight="bold" fontStyle="italic" id="lb_distance"/>
+		<mx:Label x="231" y="76" fontFamily="Verdana" fontSize="14" color="#343434" fontWeight="bold" fontStyle="italic" id="lb_rect" textAlign="center"/>
+		<mx:Label x="26" y="76" text="距离：" fontFamily="Verdana" fontSize="14" color="#990000"/>
+		<mx:Label x="163" y="76" text="外框：" fontFamily="Verdana" fontSize="14" color="#990000"/>
+		<mx:Button x="204" y="77" label="-" width="24" id="btn_rect_reduce"/>
+		<mx:Button x="265" y="78" label="+" width="24" id="btn_rect_add"/>
+	</mx:Canvas>
+	<mx:Canvas x="967" y="113" width="400" height="220" id="sp_distence" mouseDown="setTop(sp_distence);sp_distence.startDrag();" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+		<mx:Button y="10" id="btn_disContriler" x="156"/>
+		<mx:Label x="25" y="11" id="txt_count"/>
+		<mx:Label x="236" y="11" text="Label" color="#3C41B3" fontWeight="bold" fontSize="14" id="lb_map"/>
+		<mx:Button x="67" y="10" label="按钮" id="btn_hideDispanel"/>
+	</mx:Canvas>
+	<mx:Button x="754" y="113" label="全部隐藏" id="btn_hide"/>
+	<mx:Canvas x="126" y="113" width="206" height="624" id="sp_mapChoose" mouseDown="setTop(sp_mapChoose);sp_mapChoose.startDrag();">
+	</mx:Canvas>
+</mx:WindowedApplication>

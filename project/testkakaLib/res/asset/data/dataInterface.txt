@@ -1,0 +1,55 @@
+﻿{
+	"info":
+	{
+		"developer":["卡卡"],
+		"version":0.1
+
+	},
+	
+	"interfaceDefinition":
+	{
+		"1001":
+		{
+			"introduction":"获取人物信息",
+
+			//参数
+			"param":
+			{
+				"id":1234
+			},
+
+			//返回值
+			"return":
+			{
+				//人物id
+				"id":1234,
+				"name":'卡卡3',
+				'sex':1,
+				"age":16,
+				"exp":100000,
+				//好友列表id
+				"friendList":[1001,'[Date()]',1005,1007],
+				birth1:"[Date(2011-6-28,16:08:59)]",
+				birth2:"[Date(2011-6-28)]",
+				birth3:"[Date(,16:08:59)]",
+				birth:"[Date()]",
+
+				error:"[Error(1001,出错啦)]",
+
+				data:
+				{
+					name:"yy",
+					date:"[Date()]"
+				}
+			}
+
+		},
+
+		"1002":
+		{
+			//"id":1100
+			"return":{}
+		}
+	}
+
+}

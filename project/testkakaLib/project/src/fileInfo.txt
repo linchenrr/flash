@@ -1,0 +1,12 @@
+swf/preloader_asset.swf,2,8204
+swf/testBind.swf,2,3592
+swf/preloader_asset.fla,2,40448
+swf/testBind.fla,2,34691
+data/zh_cn.xml,9,54764
+data/zh_cn2.xml,9,481
+data/dataInterface.txt,13,739
+data/entries,2,4878
+data/test.txt,2,13
+data/kk/SkillEffect.kk,2,1112
+data/kk/中文.kk,8,161
+data/kk/SkillDict.kk,2,241

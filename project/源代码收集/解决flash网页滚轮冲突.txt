@@ -1,0 +1,9 @@
+function flashFocusChange(flashFocus) {
+    //if(document.activeElement.id=="chartShow"){
+    if (flashFocus) {
+        document.onmousewheel = function () { return false };
+    } else {
+        document.onmousewheel = null;
+    }
+    //setTimeout(changeFocus,200);
+}

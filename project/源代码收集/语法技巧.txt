@@ -1,0 +1,127 @@
+左位移几就相当于乘以2的几次方（ Left bit shifting to multiply by any power of two ）
+//将一个值向左侧移动一位与这个值乘以 2 等效 。浮点数通过舍去小数点后面的所有位来转换为整数。
+大约快了300%
+
+x = x * 2;
+x = x * 64;
+//相当于：
+x = x << 1;
+x = x << 6;
+
+右位移几就相当于除以2的几次方（Right bit shifting to divide by any power of two）
+//将一个值右移一位等效于将它除以 2 并舍去余数。浮点数通过舍去小数点后面的所有位来转换为整数。
+大约快了350%
+
+x = x / 2;
+x = x / 64;
+//相当于：
+x = x >> 1;
+x = x >> 6;
+
+Number 到 integer(整数)转换
+
+在AS3中使用int(x)快了10% 。尽管如此位操作版本在AS2中工作的更好
+
+x = int(1.232)
+//相当于：
+x = 1.232 >> 0;
+
+提取颜色组成成分
+
+不完全是个技巧，是正常的方法 (Not really a trick, but the regular way of extracting values using bit masking and shifting.)
+
+//24bit
+var color:uint = 0x336699;
+var r:uint = color >> 16;
+var g:uint = color >> 8 & 0xFF;
+var b:uint = color & 0xFF;
+//32bit
+var color:uint = 0xff336699;
+var a:uint = color >>> 24;
+var r:uint = color >>> 16 & 0xFF;
+var g:uint = color >>> 8 & 0xFF;
+var b:uint = color & 0xFF;
+
+合并颜色组成成分
+
+替换值到正确位置并组合他们 (‘Shift up’ the values into the correct position and combine them.)
+
+//24bit
+var r:uint = 0x33;
+var g:uint = 0x66;
+var b:uint = 0x99;
+var color:uint = r << 16 | g << 8 | b;
+//32bit
+var a:uint = 0xff;
+var r:uint = 0x33;
+var g:uint = 0x66;
+var b:uint = 0x99;
+var color:uint = a << 24 | r << 16 | g << 8 | b;
+
+获取颜色各通道值
+alpha = color32 >> 24 & 0xFF;
+red = color32 >> 16 & 0xFF; 
+green = color32 >> 8 & 0xFF; 
+blue = color32 & 0xFF;
+
+
+使用异或运算交换整数而不需要用临时变量
+
+很可爱的技巧, 在本页顶端的链接里有详细的解释 ，这里快了 20%
+
+var t:int = a;
+a = b;
+b = t;
+//相当于:
+a ^= b;
+b ^= a;
+a ^= b;
+
+自增/自减(Increment/decrement)
+
+这个比以前的慢不少，但却是个模糊你代码的好方法；-）
+
+i = -~i; // i++
+i = ~-i; // i--
+
+取反（Sign flipping using NOT or XOR）
+
+另人奇怪的是这个居然快了300%！
+
+i = -i;
+//相当于：
+i = ~i + 1;
+//或者
+i = (i ^ -1) + 1;
+
+使用bitwise AND快速取模 （Fast modulo operation using bitwise AND）
+
+如果除数是2的次方，取模操作可以这样做：
+
+模数= 分子 & (除数 - 1);
+
+这里大约快了600%
+
+x = 131 % 4;
+//相当于：
+x = 131 & (4 - 1);
+
+检查是否为偶数（Check if an integer is even/uneven using bitwise AND）
+
+这里快了 600%
+
+isEven = (i % 2) == 0;
+//相当于：
+isEven = (i & 1) == 0;
+
+绝对值
+
+忘记 Math.abs()吧 (Forget Math.abs() for time critical code.) 
+
+version 1 比 Math.abs() 快了2500% ，version 2 居然比 version 1 又快了20% ！
+
+//version 1
+i = x < 0 ? -x : x;
+//version 2
+i = (x ^ (x >> 31)) - (x >> 31);
+google_protectAndRun("render_ads.js::google_render_ad", google_handleError, google_render_ad);

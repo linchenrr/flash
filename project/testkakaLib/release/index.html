@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"/>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>水果堂</title>
+    <script type="text/javascript">
+        var mainSwf = "SgtPreloader.swf";
+
+        var swfWidth = 760;
+        var swfHeight = 600;
+
+        var flashVars = {
+            gameName: "水果堂",
+            root: "",
+            loginSocket: "10.4.4.22",
+            loginPort: "443",
+            serverHost: "t1",
+            lang: "zh_cn"
+        }
+    </script>
+    <script type="text/javascript" src="buildVersion.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+    <style type="text/css">
+        body
+        {
+            margin: 0;
+            border: 0;
+            background-image: url('images/bg.jpg');
+        }
+    </style>
+</head>
+<body>
+    <iframe id="klbar" src="http://istatic.xksj.kunlun.com/top.htm" frameboard="0" scrolling="no"
+        style="position: absolute; top: 0; width: 100%; height: 37px; border: 0"></iframe>
+    <div style="width: 100%; position: absolute; top: 36px; z-index: 10">
+        <center>
+            <img src="images/frame.jpg" /></center>
+    </div>
+    <div id="gameArea" align="center" style="width: 100%; position: absolute; top: 61px">
+    </div>
+    <script type="text/javascript">
+        init();
+    </script>
+</body>
+</html>

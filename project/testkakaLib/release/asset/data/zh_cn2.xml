@@ -1,0 +1,8 @@
+﻿<content lang="zh_cn" label="中文">
+  <text id="UI_Wish_want"><![CDATA[<%friendName%>想要的宝物]]></text>
+  <text id="UI_Gift_send"><![CDATA[are you sure <%itemName%> ？<%testParam2%>]]></text>
+  <text id="UI_loginDays"><![CDATA[you have<%txt_days%>天]]></text>
+  <text id="UI_lottery"><![CDATA[你今天还有<%lootTimes%>次抽奖机会]]></text>
+  <text id="qqsd"><![CDATA[rrrrr]]></text>
+  <text id="IT_F1_100010002"><![CDATA[xi<%pp%>gua]]></text>
+</content>

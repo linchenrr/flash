@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <resourceConfig rootPath="asset">
+    <resources path="/swf">
+      <add id="testBind" src="testBind.swf" type="swf" lazyLoading="true"/>
+      <add id="Icon" src="Icon.swf" type="swf" lazyLoading="true"/>
+      <add id="testResource" src="testResource.swf" type="swf" lazyLoading="true"/>
+    </resources>
+    <resources path="/image">
+      <add id="pic" src="pic.jpg" type="swf"/>
+    </resources>
+    <resources path="data/kk">
+      <add id="SkillEffect"  src="SkillEffect.kk" type="bin"/>
+      <add id="SkillDict"  src="SkillDict.kk" type="bin"/>
+      <add id="中文"  src="中文.kk" type="bin"/>
+    </resources>
+    <resources path="data">
+      <add id="dataInterface" src="dataInterface.txt"  type="text" />
+      <add id="zh_cn" src="zh_cn.xml" type="text" />
+      <add id="zh_cn2" src="zh_cn2.xml" type="text" />
+      <add id="entries" src="entries"  type="text" />
+    </resources>
+    <resources path="/mp3">
+      <add id="my soul" src="my soul.mp3" type="mp3" />
+      <add id="msg" src="msg.mp3" type="mp3" />
+    </resources>
+  </resourceConfig>
+
+  <scene>
+    <add id="default" className="ui.scene.DefaultScene" link="DefaultScene" resourceId="testBind,testResource" default="true" />
+    <add id="game" className="ui.scene.GameScene" link="GameScene" resourceId="testBind" />
+  </scene>
+  
+  <appSettings>
+    <add key="frameRate" value="30"/>
+    <add key="debugMode" value="true"/>
+    <add key="version" value="1.0.0.1"/>
+  </appSettings>
+
+  <appParameters>
+    <add key="gameName" value="卡卡"/>
+    <add key="root" value="../../res"/>
+  </appParameters>
+
+  <customSettings>
+    <add key="testKey1" value="haha"/>
+    <add key="testKey5" value="hah55a"/>
+  </customSettings>
+</config>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fxpProperties abbreviated="false" authoringTool="Flex Builder" compiles="true" parentProject="7a4b5477-8ff5-44b0-8a8e-083d44b841a1" projectUUID="7a4b5477-8ff5-44b0-8a8e-083d44b841a1" sdkVersion="4.0.0" uuid="8d4ae6e5-a2d2-49e5-af29-996bdc278812" version="4">
+  <projects/>
+  <src/>
+  <swc>
+    <linked location="sdkPlaceHolder" path="sdkPlaceHolder" position="0" uuid="8d4ae6e5-a2d2-49e5-af29-996bdc278812"/>
+    <linked location="E:/代码/ddtCheatFB4/libs" path="/libs" position="1" uuid="efffea9b-eeaf-4491-a97f-c2e9aae27bb4"/>
+  </swc>
+  <misc/>
+  <theme/>
+</fxpProperties>

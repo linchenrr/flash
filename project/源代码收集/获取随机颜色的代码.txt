@@ -1,0 +1,12 @@
+
+随机全色区
+int(Math.random()*0xffffff)
+int(Math.random()*255)<<16|int(Math.random()*255)<<8|int(Math.random()*255)
+随机亮色区
+int(Math.random()*128+127)<<16|int(Math.random()*128+127)<<8|int(Math.random()*128+127)
+随机暗色区
+int(Math.random()*128)<<16|int(Math.random()*128)<<8|int(Math.random()*128)
+随机温色区
+int(Math.random()*128+64)<<16|int(Math.random()*128+64)<<8|int(Math.random()*128+64)
+随机红色区
+int(Math.random()*256)<<16|0<<8|0)

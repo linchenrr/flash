@@ -1,0 +1,5 @@
+.fla
+.tmp
+.as
+fileInfo.txt
+buildVersion.js
