@@ -170,7 +170,7 @@ package org.superkaka.KLib.utils
 			
 			if (trimString == null) 
 			{
-				trimString += "\\s";
+				regString += "\\s";
 			}
 			else if (trimString is String)
 			{
